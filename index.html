@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Internship Plan</title>
+<meta name="description" content="Five milestones: Claude Code, a science page, two APIs, video models, one merged MR.">
+<style>
+  :root{
+    --bg:#ffffff; --ink:#15170f; --muted:#5d6152; --line:#dcdcd8;
+    --accent:#1f5f3f; --accent-soft:#e7f0ea;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --bg:#131412; --ink:#ecebe4; --muted:#a3a597; --line:#33352d; --accent:#7fc9a0; --accent-soft:#1c2a22; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.5 ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  main{max-width:60rem; margin:0 auto; padding:3rem 1.25rem 4rem}
+  h1{font-size:clamp(1.9rem,4vw,2.6rem); line-height:1.1; margin:0 0 .5rem; letter-spacing:-.02em}
+  .lede{margin:0 0 2rem; color:var(--muted); font-size:1.05rem}
+  .lede b{color:var(--ink); font-weight:600}
+  .rule{
+    border-left:3px solid var(--accent); background:var(--accent-soft);
+    padding:.75rem 1rem; margin:0 0 2rem; border-radius:0 6px 6px 0;
+  }
+  .rule b{color:var(--accent)}
+  .scroll{overflow-x:auto; margin:0 -1.25rem; padding:0 1.25rem}
+  table{border-collapse:collapse; width:100%; min-width:44rem}
+  th,td{text-align:left; vertical-align:top; padding:.8rem .75rem; border-bottom:1px solid var(--line)}
+  th{font-size:.85rem; color:var(--muted); font-weight:600; border-bottom:2px solid var(--ink)}
+  td:first-child{font-weight:700; color:var(--accent); font-variant-numeric:tabular-nums; white-space:nowrap}
+  td a{color:var(--accent); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:2px}
+  td a:hover{text-decoration-thickness:2px}
+  .shared{color:var(--muted); font-size:.9rem}
+  code{font:.92em ui-monospace,SFMono-Regular,Menlo,monospace; background:var(--accent-soft); padding:.05em .35em; border-radius:4px}
+  section{margin-top:2.25rem}
+  h2{font-size:1rem; color:var(--ink); margin:0 0 .35rem; font-weight:700}
+  p{margin:0}
+  .five{font-size:1.2rem; font-weight:600; letter-spacing:.01em}
+  .five span{color:var(--muted); font-weight:400; padding:0 .4rem}
+  .note{margin-top:2.5rem; padding-top:1rem; border-top:1px solid var(--line); color:var(--muted); font-size:.92rem}
+  @media print{ body{background:#fff;color:#000} .scroll{overflow:visible} a{color:#000} }
+</style>
+</head>
+<body>
+<main>
+  <h1>Internship Plan</h1>
+  <p class="lede">Five milestones, in order. Each one is done when the thing works.</p>
+
+  <div class="scroll">
+  <table>
+    <thead>
+      <tr><th>#</th><th>Task</th><th>Done when</th><th>Resources</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Learn Claude Code: skills, agents, MCP, APIs. Make one skill and one agent for a task you repeat. Practice: research design skills for Claude Code, check them for quality and security, install the best one.</td>
+        <td>The skill runs on its trigger phrase. The agent finishes one task on its own. One design skill installed and used, with a short note: what you compared, what you checked before installing.</td>
+        <td><a href="https://code.claude.com/docs">Claude Code docs</a>, <a href="https://code.claude.com/docs/en/skills">Skills</a>, <a href="https://code.claude.com/docs/en/sub-agents">Agents</a>, <a href="https://code.claude.com/docs/en/mcp">MCP</a>, <a href="https://github.com/anthropics/skills">Anthropic skills repo</a></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Build one page that explains one quantum-mechanics concept with a clear visual. Example: the double-slit experiment.</td>
+        <td>Page is live. Every claim has a source and a year. A non-physicist gets it in 2 minutes.</td>
+        <td><a href="https://pages.github.com">GitHub Pages</a>, <a href="https://arxiv.org/list/quant-ph/recent">arXiv quant-ph</a></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Set up an environment. Connect two live APIs: Picsart Gen AI MCP and PubMed.</td>
+        <td>One repo with <code>.env.example</code> and one script: makes 1 image, answers 1 health question with 3 papers. No key in git.</td>
+        <td><a href="https://picsart.com/cli">Picsart MCP and CLI</a>, <a href="https://www.ncbi.nlm.nih.gov/books/NBK25497/">PubMed E-utilities</a></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Research video models and how they work: image-first vs text-to-video, motion and camera prompting, character consistency, sound. Then make the same 10-second video four ways: Playground, Flow, CLI, MCP.</td>
+        <td>One short note on 3 to 5 video models: what each does well, where it fails. 4 videos + one table: time, credits, quality, control. One recommendation: which tool for which job.</td>
+        <td><a href="https://picsart.com/flows/">Picsart Flow</a>, <a href="https://picsart.com/ai-playground">Playground</a>, <a href="https://picsart.com/cli">Picsart MCP and CLI</a></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Improve the content automation system on GitLab.</td>
+        <td>One merged MR in <code>content-creators</code>.</td>
+        <td><a href="https://tik-sargsyan.github.io/content-creators-overview/">Content Creators overview</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</main>
+</body>
+</html>
